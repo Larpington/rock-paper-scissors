@@ -23,30 +23,54 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice()
     if (playerSelection === "rock" && computerSelection === "scissors") {
-        return "You win! Rock beats Scissors!"
+        console.log("You win! Rock beats Scissors!");
+        return "win";
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        return "You lose! Paper beats Rock!"
+        console.log("You lose! Paper beats Rock!");        
+        return "lose";
     } else if (playerSelection === "rock" && computerSelection === "rock"){
-        return "Tie!"
-    }
-    if (playerSelection === "paper" && computerSelection === "rock") {
-        return "You win! Paper beats Rock!"
+        console.log("Tie! Try again!");
+        playRound();
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        console.log("You win! Paper beats Rock!");       
+        return "win";
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        return "You lose! Scissors beats Paper!"
+        console.log("You lose! Scissors beats Paper!");      
+        return "lose"; 
     } else if (playerSelection === "paper" && computerSelection === "paper"){
-        return "Tie!"
-    }
-    if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "You win! Scissors beats Paper!"
+        console.log("Tie! Try again!");
+        playRound();
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        console.log("You win! Scissors beats Paper!");
+        return "win"; 
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        return "You lose! Rock beats Scissors!"
+        console.log("You lose! Rock beats Scissors!");
+        return "lose"; 
     } else if (playerSelection === "scissors" && computerSelection === "scissors"){
-        return "Tie!"
+        console.log("Tie! Try again!");
+        playRound();
     }
 
 }
-console.log(playRound());
+function game() {    
+    if (outcome === "win"){
+        playerScore++;
+    } else if (outcome === "lose"){
+        computerScore++;
+    } 
+    if (playerScore > 3) {
+        console.log("Congratulations! You have triumphed over the computer!");
+    } else if (computerScore > 3 ) {
+        console.log("Sorry! You have lost, please try again!");
+    }
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
 
+}
+playRound()
     </script>
 </body>
 </html>
