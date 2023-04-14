@@ -18,59 +18,74 @@ function getComputerChoice() {
     return "scissors";
 }
 }
+let playerScore = 0;
+let computerScore = 0;
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("What is your selection?");
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice()
     if (playerSelection === "rock" && computerSelection === "scissors") {
         console.log("You win! Rock beats Scissors!");
-        return "win";
+        playerScore++;
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         console.log("You lose! Paper beats Rock!");        
-        return "lose";
+        computerScore++;
     } else if (playerSelection === "rock" && computerSelection === "rock"){
-        console.log("Tie! Try again!");
+        console.log("Tie! Play again!");
         playRound();
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         console.log("You win! Paper beats Rock!");       
-        return "win";
+        playerScore++;
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         console.log("You lose! Scissors beats Paper!");      
-        return "lose"; 
+        computerScore++; 
     } else if (playerSelection === "paper" && computerSelection === "paper"){
-        console.log("Tie! Try again!");
+        console.log("Tie! Play again!");
         playRound();
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         console.log("You win! Scissors beats Paper!");
-        return "win"; 
+        playerScore++; 
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         console.log("You lose! Rock beats Scissors!");
-        return "lose"; 
+        computerScore++; 
     } else if (playerSelection === "scissors" && computerSelection === "scissors"){
-        console.log("Tie! Try again!");
+        console.log("Tie! Play again!");
         playRound();
     }
-
 }
+
 function game() {    
-    if (outcome === "win"){
+    if (outcome === "win") {
         playerScore++;
-    } else if (outcome === "lose"){
+    } else if (outcome === "lose") {
         computerScore++;
+    } else if (outcome === "tie")
+        playRound();
+    if (playerScore >= 3) {
+        console.log("You have triumphed against the computer! Congratulations!");
+    } else if (computerScore >= 3) {
+        console.log("You have been defeated, please try again!");
     } 
-    if (playerScore > 3) {
-        console.log("Congratulations! You have triumphed over the computer!");
-    } else if (computerScore > 3 ) {
-        console.log("Sorry! You have lost, please try again!");
-    }
     playRound();
+    console.log("Player Score: " + playerScore)
+    console.log("Computer Score: " + computerScore)
     playRound();
+    console.log("PlayerScore:" + playerScore)
+    console.log("ComputerScore:" + computerScore)
     playRound();
+    console.log("PlayerScore:" + playerScore)
+    console.log("ComputerScore:" + computerScore)
     playRound();
+    console.log("PlayerScore:" + playerScore)
+    console.log("ComputerScore:" + computerScore)
     playRound();
+    console.log("PlayerScore:" + playerScore)
+    console.log("ComputerScore:" + computerScore)
+
+
 
 }
-playRound()
+game();
     </script>
 </body>
 </html>
