@@ -55,17 +55,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {    
-    if (outcome === "win") {
-        playerScore++;
-    } else if (outcome === "lose") {
-        computerScore++;
-    } else if (outcome === "tie")
-        playRound();
-    if (playerScore >= 3) {
-        console.log("You have triumphed against the computer! Congratulations!");
-    } else if (computerScore >= 3) {
-        console.log("You have been defeated, please try again!");
-    } 
     playRound();
     console.log("Player Score: " + playerScore)
     console.log("Computer Score: " + computerScore)
@@ -82,8 +71,11 @@ function game() {
     console.log("PlayerScore:" + playerScore)
     console.log("ComputerScore:" + computerScore)
 
-
-
+    if (playerScore === 3) {
+        console.log("You have triumphed against the computer! Congratulations!");
+    } else if (computerScore === 3) {
+        console.log("You have been defeated, please try again!");
+    } 
 }
 game();
     </script>
