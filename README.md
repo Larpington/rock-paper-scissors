@@ -1,7 +1,7 @@
 # rock-paper-scissors
 This is a simple rock-paper-scissors game that is executed in the browser console. This was my first time playing around with javascript and making anything.
 
-Stuff I learned: 
+Stuff I learned:  
 -How to properly execute if statements  
 -How to use the return value of an if statement to increment a variable  
 -How to mass replace text using vscode  
