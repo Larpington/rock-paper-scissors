@@ -55,25 +55,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {    
-    playRound();
-    console.log("Player Score: " + playerScore)
-    console.log("Computer Score: " + computerScore)
-    playRound();
-    console.log("PlayerScore:" + playerScore)
-    console.log("ComputerScore:" + computerScore)
-    playRound();
-    console.log("PlayerScore:" + playerScore)
-    console.log("ComputerScore:" + computerScore)
-    playRound();
-    console.log("PlayerScore:" + playerScore)
-    console.log("ComputerScore:" + computerScore)
-    playRound();
-    console.log("PlayerScore:" + playerScore)
-    console.log("ComputerScore:" + computerScore)
+    for (let i = 1; i < 6; i++) {
+        playRound();
+        console.log("PlayerScore:" + playerScore)
+        console.log("ComputerScore:" + computerScore)
+    }
 
-    if (playerScore === 3) {
+    if (playerScore >= 3) {
         console.log("You have triumphed against the computer! Congratulations!");
-    } else if (computerScore === 3) {
+    } else if (computerScore >= 3) {
         console.log("You have been defeated, please try again!");
     } 
 }
