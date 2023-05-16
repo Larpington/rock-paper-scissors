@@ -11,8 +11,6 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("What is your selection?");
-    playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice()
     if (playerSelection === "rock" && computerSelection === "scissors") {
         console.log("You win! Rock beats Scissors!");
@@ -51,4 +49,18 @@ function game() {
         console.log("You have been defeated, please try again!");
     } 
 }
-console.log("Hello world")
+
+const button1 = document.querySelector(".rock-button");
+button1.addEventListener("click", function (e) {
+    playRound("rock")
+});
+
+const button2 = document.querySelector(".paper-button");
+button2.addEventListener("click", function (e) {
+    playRound("paper");
+});
+
+const button3 = document.querySelector(".scissors-button");
+button3.addEventListener("click", function (e) {
+    playRound("scissors");
+});
