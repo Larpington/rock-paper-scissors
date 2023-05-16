@@ -64,3 +64,6 @@ const button3 = document.querySelector(".scissors-button");
 button3.addEventListener("click", function (e) {
     playRound("scissors");
 });
+
+const div1 = document.querySelector(".results")
+div1.textContent = "Results:"
