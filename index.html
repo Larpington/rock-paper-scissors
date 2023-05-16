@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <button>Rock</button>
+    <button>Paper</button>
+    <button>Scissors</button>
     <script>
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random()  * 3);
@@ -55,12 +58,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {    
-    for (let i = 1; i < 6; i++) {
-        playRound();
-        console.log("PlayerScore:" + playerScore)
-        console.log("ComputerScore:" + computerScore)
-    }
-
     if (playerScore >= 3) {
         console.log("You have triumphed against the computer! Congratulations!");
     } else if (computerScore >= 3) {
