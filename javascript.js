@@ -54,28 +54,36 @@ function playRound(playerSelection, computerSelection) {
 function game() {    
         if (playerScore >= 3) {
         div3.textContent = "You have triumphed against the computer! Congratulations!";
-        button1.removeEventListener("click", playGame);
-        button2.removeEventListener("click", playGame);
-        button3.removeEventListener("click", playGame);
+        button1.removeEventListener("click", rock);
+        button2.removeEventListener("click", paper);
+        button3.removeEventListener("click", scissors);
     } else if (computerScore >= 3) {
         div3.textContent = "You have been defeated, please try again!";
-        button1.removeEventListener("click", playGame);
-        button2.removeEventListener("click", playGame);
-        button3.removeEventListener("click", playGame);
+        button1.removeEventListener("click", rock);
+        button2.removeEventListener("click", paper);
+        button3.removeEventListener("click", scissors);
     } 
 }
-function playGame(){
+function rock(){
     playRound("rock")
     game();
 }
+function paper(){
+    playRound("paper")
+    game();
+}
+function scissors(){
+    playRound("scissors")
+    game();
+}
 const button1 = document.querySelector(".rock-button");
-button1.addEventListener("click", playGame);
+button1.addEventListener("click", rock);
 
 const button2 = document.querySelector(".paper-button");
-button2.addEventListener("click", playGame);
+button2.addEventListener("click", paper);
 
 const button3 = document.querySelector(".scissors-button");
-button3.addEventListener("click", playGame);
+button3.addEventListener("click", scissors);
 
 const div1 = document.querySelector(".round-results");
 
