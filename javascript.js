@@ -15,29 +15,38 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "scissors") {
         div1.textContent = "Results: You win! Rock beats Scissors!"
         playerScore++;
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        div1.textContent = "Results: You lose! Paper beats Rock!";        
+        div1.textContent = "Results: You lose! Paper beats Rock!"; 
         computerScore++;
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
     } else if (playerSelection === "rock" && computerSelection === "rock"){
         div1.textContent = "Results: Tie! Play again!";
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
         playRound();
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        div1.textContent = "Results: You win! Paper beats Rock!";       
         playerScore++;
+        div1.textContent = "Results: You win! Paper beats Rock!"; 
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;      
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         div1.textContent = "Results: You lose! Scissors beats Paper!";      
         computerScore++; 
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
     } else if (playerSelection === "paper" && computerSelection === "paper"){
         div1.textContent = "Results: Tie! Play again!";
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
         playRound();
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         div1.textContent = "Results: You win! Scissors beats Paper!";
         playerScore++; 
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         div1.textContent = "Results: You lose! Rock beats Scissors!";
         computerScore++; 
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
     } else if (playerSelection === "scissors" && computerSelection === "scissors"){
         div1.textContent = "Results: Tie! Play again!";
+        div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
         playRound();
     }
 }
@@ -65,5 +74,7 @@ button3.addEventListener("click", function (e) {
     playRound("scissors");
 });
 
-const div1 = document.querySelector(".results")
-div1.textContent = "Results:"
+const div1 = document.querySelector(".results");
+
+const div2 = document.querySelector(".score");
+div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
