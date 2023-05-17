@@ -52,29 +52,37 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {    
-    if (playerScore >= 3) {
-        console.log("You have triumphed against the computer! Congratulations!");
+        if (playerScore >= 3) {
+        div3.textContent = "You have triumphed against the computer! Congratulations!";
     } else if (computerScore >= 3) {
-        console.log("You have been defeated, please try again!");
+        div3.textContent = "You have been defeated, please try again!";
     } 
 }
 
 const button1 = document.querySelector(".rock-button");
 button1.addEventListener("click", function (e) {
     playRound("rock")
+    game();
 });
 
 const button2 = document.querySelector(".paper-button");
 button2.addEventListener("click", function (e) {
     playRound("paper");
+    game();
+
 });
 
 const button3 = document.querySelector(".scissors-button");
 button3.addEventListener("click", function (e) {
     playRound("scissors");
+    game();
+
 });
 
-const div1 = document.querySelector(".results");
+const div1 = document.querySelector(".round-results");
 
 const div2 = document.querySelector(".score");
 div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
+
+const div3 = document.querySelector(".game-results")
+
