@@ -16,28 +16,28 @@ function playRound(playerSelection, computerSelection) {
         div1.textContent = "Results: You win! Rock beats Scissors!"
         playerScore++;
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        div1.textContent = "You lose! Paper beats Rock!";        
+        div1.textContent = "Results: You lose! Paper beats Rock!";        
         computerScore++;
     } else if (playerSelection === "rock" && computerSelection === "rock"){
-        div1.textContent = "Tie! Play again!";
+        div1.textContent = "Results: Tie! Play again!";
         playRound();
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        div1.textContent ="You win! Paper beats Rock!";       
+        div1.textContent = "Results: You win! Paper beats Rock!";       
         playerScore++;
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        div1.textContent = "You lose! Scissors beats Paper!";      
+        div1.textContent = "Results: You lose! Scissors beats Paper!";      
         computerScore++; 
     } else if (playerSelection === "paper" && computerSelection === "paper"){
-        div1.textContent = "Tie! Play again!";
+        div1.textContent = "Results: Tie! Play again!";
         playRound();
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        div1.textContent = "You win! Scissors beats Paper!";
+        div1.textContent = "Results: You win! Scissors beats Paper!";
         playerScore++; 
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        div1.textContent = "You lose! Rock beats Scissors!";
+        div1.textContent = "Results: You lose! Rock beats Scissors!";
         computerScore++; 
     } else if (playerSelection === "scissors" && computerSelection === "scissors"){
-        div1.textContent = "Tie! Play again!";
+        div1.textContent = "Results: Tie! Play again!";
         playRound();
     }
 }
