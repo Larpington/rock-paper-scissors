@@ -53,7 +53,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {    
         if (playerScore >= 3) {
-        div3.textContent = "You have triumphed against the computer! Congratulations!";
+        div3.textContent = "You have beaten the computer! Congratulations!";
         button1.removeEventListener("click", rock);
         button2.removeEventListener("click", paper);
         button3.removeEventListener("click", scissors);
