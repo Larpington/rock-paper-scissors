@@ -57,11 +57,18 @@ function game() {
         button1.removeEventListener("click", rock);
         button2.removeEventListener("click", paper);
         button3.removeEventListener("click", scissors);
+        button4.textContent = "Try Again";
+        button4.classList.add("reset-button")
+        container.appendChild(button4);
+
     } else if (computerScore >= 3) {
         div3.textContent = "You have been defeated, please try again!";
         button1.removeEventListener("click", rock);
         button2.removeEventListener("click", paper);
         button3.removeEventListener("click", scissors);
+        button4.textContent = "Try Again";
+        button4.classList.add("reset-button")
+        container.appendChild(button4);
     } 
 }
 function rock(){
@@ -76,6 +83,10 @@ function scissors(){
     playRound("scissors")
     game();
 }
+
+function resetGame(){
+    location.reload();
+}
 const button1 = document.querySelector(".rock-button");
 button1.addEventListener("click", rock);
 
@@ -85,10 +96,16 @@ button2.addEventListener("click", paper);
 const button3 = document.querySelector(".scissors-button");
 button3.addEventListener("click", scissors);
 
+const button4 = document.createElement('button');                     
+button4.addEventListener("click", resetGame);
+
 const div1 = document.querySelector(".round-results");
 
 const div2 = document.querySelector(".score");
 div2.textContent = "Player Score: " + playerScore + " | " + "Computer Score: " + computerScore;
 
-const div3 = document.querySelector(".game-results")
+const div3 = document.querySelector(".game-results");
 
+const container = document.querySelector(".container");
+
+button4.addEventListener("click", scissors);

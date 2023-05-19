@@ -8,6 +8,11 @@ button {
     border-radius: 12px;
 }
 
+.reset-button {
+    display: block;
+    margin: 0 auto;
+}
+
 body {
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,23 +25,25 @@ div {
 
 .score {
     font-size: 21px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .round-results {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .game-results {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
  }
  
 .container {
     width: 340px;
+    height: 1000px;
 }
 
 .center {
