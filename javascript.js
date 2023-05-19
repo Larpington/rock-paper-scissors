@@ -108,4 +108,3 @@ const div3 = document.querySelector(".game-results");
 
 const container = document.querySelector(".container");
 
-button4.addEventListener("click", scissors);
