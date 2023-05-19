@@ -52,7 +52,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {    
-        if (playerScore >= 3) {
+        if (playerScore === 5) {
         div3.textContent = "You have beaten the computer! Congratulations!";
         button1.removeEventListener("click", rock);
         button2.removeEventListener("click", paper);
@@ -61,7 +61,7 @@ function game() {
         button4.classList.add("reset-button")
         container.appendChild(button4);
 
-    } else if (computerScore >= 3) {
+    } else if (computerScore === 5) {
         div3.textContent = "You have been defeated, please try again!";
         button1.removeEventListener("click", rock);
         button2.removeEventListener("click", paper);
